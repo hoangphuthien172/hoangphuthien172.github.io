@@ -1,0 +1,106 @@
+# Trên VPS
+
+1. Lệnh cài chrome
+
+```bash
+$LocalTempDir = $env:TEMP; $ChromeInstaller = "ChromeInstaller.exe"; (new-object System.Net.WebClient).DownloadFile('http://dl.google.com/chrome/install/375.126/chrome_installer.exe', "$LocalTempDir\$ChromeInstaller"); & "$LocalTempDir\$ChromeInstaller" /silent /install; $Process2Monitor = "ChromeInstaller"; Do { $ProcessesFound = Get-Process | ?{$Process2Monitor -contains $_.Name} | Select-Object -ExpandProperty Name; If ($ProcessesFound) { "Still running: $($ProcessesFound -join ', ')" | Write-Host; Start-Sleep -Seconds 2 } else { rm "$LocalTempDir\$ChromeInstaller" -ErrorAction SilentlyContinue -Verbose } } Until (!$ProcessesFound)
+```
+
+2. Tắt lock acc
+
+```bash
+net accounts /lockoutthreshold:0
+```
+3. Renew win server
+```bash
+net accounts /lockoutthreshold:0
+```
+3. Renew win server
+```bash
+slmgr.vbs -rearm
+```
+4. Restart VPS
+```bash
+shutdown -r -t 0
+```
+5. Kích hoạt windows Win 2012 R2
+```bash
+slmgr /ipk W3GGN-FT8W3-Y4M27-J84CP-Q3VJ9
+```
+6. Kích hoạt windows Win 2019
+```bash
+slmgr /ipk WMDGN-G9PQG-XVVXX-R3X43-63DFG
+```
+7. Kích hoạt windows Win 2022
+```bash
+slmgr /ipk WX4NM-KYWYW-QJJR4-XV3QB-6VM33
+```
+8. Kích hoạt windows Win 10/11 Pro
+```bash
+slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
+```
+9. Kích hoạt nhà cung cấp
+```bash
+slmgr /skms kms8.msguides.com
+```
+10. Kích hoạt windows Win 10/11 Pro
+```bash
+slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
+```
+8. Hoàn tất kích hoạt
+```bash
+slmgr /ato
+```
+8. Kích hoạt windows Win 10/11 Pro
+```bash
+slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
+```
+8. Kích hoạt windows Win 10/11 Pro
+```bash
+slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
