@@ -1,8 +1,16 @@
-# 🧾 Markdown là gì?
+# Install iRedMail
 
-Markdown là ngôn ngữ đánh dấu đơn giản, dễ viết, giúp trình bày văn bản rõ ràng.
+Open the terminal and run the following command to set the hostname.
 
-## ✨ Ưu điểm
+```sudo hostnamectl set-hostname mail.example.com
+
+Open the /etc/hosts file.
+
+```sudo nano /etc/hosts
+
+
+
+
 
 - Viết nhanh
 - Đọc dễ
