@@ -1,11 +1,8 @@
 # Install iRedMail
 
 Open the terminal and run the following command to set the hostname.
-
 ```sudo hostnamectl set-hostname mail.example.com
-
 Open the /etc/hosts file.
-
 ```sudo nano /etc/hosts
 
 
